@@ -27,30 +27,40 @@
 <h2>
 <a id="steps-to-add-the-video" class="anchor" href="#steps-to-add-the-video" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Steps to add the video</h2>
 
-<ol>
+<ul>
 <li>First create a github page for your repository. Go to your repository's settings and select "Launch automatic page generator".  Follow the instructions to create your page and familiarize yourself with markdown.</li>
-<li>Create your website with markdown and include a section for your video.  Publish the page.</li>
+<li> Create your website with markdown and include a section for your video.  Publish the page.</li>
 <li>Upload your video to youtube.  Select the share option and choose embed video.  It should look like this:</li>
-</ol>
+</ul>
 
 <pre><code>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/f5l8GA1PHm8" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
 </code></pre>
 
-<ol>
+<ul>
 <li>Check out the github pages branch of your repository (gh-pages).  Here's the code I used to check out this repository, "githubpage":</li>
-</ol>
+</ul>
 
 <pre><code>git clone -b gh-pages https://github.com/arii/githubpage.git
 </code></pre>
 
-<ol>
+<ul>
 <li>Edit index.html with your favorite text editor.  Locate the video section and paste the iframe code from youtube.</li>
 <li>Commit and push your changes.</li>
-</ol>
+</ul>
 
 <pre><code>git add index.html
 git commit -m "added video"
 git push 
+</code></pre>
+
+<ul>
+<li>If you want to re-edit your page simply redo the process.  Modify the markdown with "launch automatic page generator". Then pull the changes in your git repository and modify index.html</li>
+</ul>
+
+<pre><code>git pull
+# modify index.html
+git commit -m "re-added video"
+git push
 </code></pre>
 
 <h3>
